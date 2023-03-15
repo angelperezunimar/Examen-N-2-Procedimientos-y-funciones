@@ -80,7 +80,7 @@ divisor:= 2;
 color:= 14;
 comprobacion(num,divisor,color);
 
-	readln();
+readln();
 	
 END.
 
