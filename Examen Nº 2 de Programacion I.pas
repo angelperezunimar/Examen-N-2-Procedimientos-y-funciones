@@ -15,6 +15,35 @@ divbin:integer;
 
 BEGIN
 	
+	writeln('Ingrese el texto');
+  readln(txt);
+  
+  // Transforma a Binario //
+    
+  for l:= 1 to Length(txt) do
+  begin
+  bint:= ord(txt[l]);
+  divbin:= 128;
+       for pb:= 1 to 8 do
+       begin
+             
+             if bint >= divbin then
+             begin
+             write('1');
+             bint:= bint - divbin;
+             end
+     
+              else
+              write('0');
+              
+        divbin:= divbin div 2;
+        end;
+  write(' ');
+  end;
+  
+  //========================//
+  
+  readln;
 	
 END.
 
