@@ -5,12 +5,13 @@
 //conversiones. Tener en cuenta que el programa también debe mostrar la opción de salir
 //o de convertir otra frase.
 
-
-
-program untitled;
+program traductorabinhexaoctyrom;
 
 uses crt;
-var i : byte;
+var
+l, pb, bint:Longint;
+txt:string;
+divbin:integer;
 
 BEGIN
 	
