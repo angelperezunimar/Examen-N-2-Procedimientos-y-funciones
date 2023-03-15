@@ -46,6 +46,9 @@ BEGIN
 writeln('Ingrese un numero');
 readln(num);
 
+textcolor(white);
+	writeln('El numero que usted ingreso es: ', num);
+
 // ===> Se llama al procedimiento y se le asignan los valores adecuados para comprobar si es divisible entre 13 <===//
 
 divisor:= 13;
