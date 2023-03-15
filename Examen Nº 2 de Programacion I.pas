@@ -12,7 +12,6 @@ program Enunciado2ColoresBonitosuwu;
 
 uses crt;
 var 
-	tofd: boolean;
 	num, divisor:longint;
 	color:byte;
 
