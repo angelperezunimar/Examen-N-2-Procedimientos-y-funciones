@@ -8,10 +8,12 @@
 // 6. De no ser divisible en base de cualquiera de los casos expuestos deberá imprimir el
 // texto en color blanco.
 
-program untitled;
+program Enunciado2ColoresBonitosuwu;
 
 uses crt;
-var i : byte;
+var 
+tofd: boolean;
+num, divisor:longint;
 
 BEGIN
 	
