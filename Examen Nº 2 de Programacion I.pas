@@ -26,13 +26,34 @@ if x mod y = 0 then
 	write(x);
 	textcolor(white);
 	writeln(') es divisible entre ', y);
+	end
+	
+	else
+	begin 
+	textcolor(white);
+	write('El numero que usted ingreso ('); 
+	write(x);
+	writeln(') no es divisible entre ', y);
+	end
+	
 
 end;
 
 
 
 BEGIN
-	
+
+writeln('Ingrese un numero');
+readln(num);
+divisor:= 13;
+comprobacion(num, divisor);
+
+
+
+
+
+
+	readln();
 	
 END.
 
