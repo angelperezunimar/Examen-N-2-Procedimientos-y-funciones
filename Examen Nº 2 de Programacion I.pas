@@ -12,9 +12,9 @@ program Enunciado2ColoresBonitosuwu;
 
 uses crt;
 var 
-tofd: boolean;
-num, divisor:longint;
-color:byte;
+	tofd: boolean;
+	num, divisor:longint;
+	color:byte;
 
 procedure comprobacion (var x, y:longint;z:byte);
 
@@ -22,23 +22,22 @@ begin
 
 if x mod y = 0 then 
 	begin 
-	textcolor(white);
-	write('El numero que usted ingreso ('); 
-	textcolor(z);
-	write(x);
-	textcolor(white);
-	writeln(') es divisible entre ', y);
+		textcolor(white);
+		write('El numero que usted ingreso ('); 
+		textcolor(z);
+		write(x);
+		textcolor(white);
+		writeln(') es divisible entre ', y);
 	end
 	
-	else
+else
 	begin 
-	textcolor(white);
-	write('El numero que usted ingreso ('); 
-	write(x);
-	writeln(') no es divisible entre ', y);
+		textcolor(white);
+		write('El numero que usted ingreso ('); 
+		write(x);
+		writeln(') no es divisible entre ', y);
 	end
 	
-
 end;
 
 BEGIN
@@ -78,12 +77,6 @@ comprobacion(num,divisor,color);
 divisor:= 2;
 color:= 14;
 comprobacion(num,divisor,color);
-
-
-
-
-
-
 
 	readln();
 	
