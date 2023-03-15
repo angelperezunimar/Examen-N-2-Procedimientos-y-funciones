@@ -13,35 +13,47 @@ l, pb, bint:Longint;
 txt:string;
 divbin:integer;
 
-BEGIN
-	
-	writeln('Ingrese el texto');
-  readln(txt);
+// Traductor a Binario //
+
+procedure traductorbinario (v,w,x:longint; y:string; z:integer);
+
+begin
+
   
-  // Transforma a Binario //
     
-  for l:= 1 to Length(txt) do
+  for v:= 1 to Length(y) do
   begin
-  bint:= ord(txt[l]);
-  divbin:= 128;
-       for pb:= 1 to 8 do
+  x:= ord(y[v]);
+  z:= 128;
+       for w:= 1 to 8 do
        begin
-             
-             if bint >= divbin then
+             if x >= z then
              begin
              write('1');
-             bint:= bint - divbin;
+             x:= x - z;
              end
      
               else
               write('0');
               
-        divbin:= divbin div 2;
+        z:= z div 2;
         end;
   write(' ');
   end;
   
   //========================//
+  
+	
+end;
+
+
+
+BEGIN
+	
+	writeln('Ingrese el texto');
+  readln(txt);
+  
+  traductorbinario(l,pb,bint,txt,divbin);
   
   readln;
 	
