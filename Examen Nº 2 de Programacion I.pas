@@ -15,6 +15,22 @@ var
 tofd: boolean;
 num, divisor:longint;
 
+procedure comprobacion (x, y:integer);
+begin
+
+if x mod y = 0 then 
+	begin 
+	textcolor(white);
+	write('El numero que usted ingreso ('); 
+	textcolor(brown);
+	write(x);
+	textcolor(white);
+	writeln(') es divisible entre ', y);
+
+end;
+
+
+
 BEGIN
 	
 	
