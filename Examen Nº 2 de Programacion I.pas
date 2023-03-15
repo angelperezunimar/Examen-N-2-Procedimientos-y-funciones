@@ -16,6 +16,9 @@ var
 	num, divisor:longint;
 	color:byte;
 
+// ===> Se plantea el procedimiento fundamental del programa, este se encarga de verificar <===//
+// ===> que el numero sea divisible o no y imprimir adecuadamente el resultado <===//
+
 procedure comprobacion (var x, y:longint;z:byte);
 
 begin
