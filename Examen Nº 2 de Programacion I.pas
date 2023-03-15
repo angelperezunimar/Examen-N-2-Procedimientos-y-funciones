@@ -11,9 +11,9 @@ uses crt;
 var
 l, pb, bint:Longint;
 txt:string;
-divbin:integer;
+divbin,slc:integer;
 
-// Traductor a Binario //
+// Procedimineto de traductor a Binario //
 
 procedure traductorbinario (v,w,x:longint; y:string; z:integer);
 
@@ -46,16 +46,53 @@ begin
 	
 end;
 
-
-
 BEGIN
 	
-	writeln('Ingrese el texto');
-  readln(txt);
-  
-  traductorbinario(l,pb,bint,txt,divbin);
-  
-  readln;
+writeln('Ingrese el texto');
+readln(txt);
+
+clrscr();
+
+writeln('¿A que desea traducirlo?');
+writeln('1.- Binario');
+writeln('2.- Hexadecimal');
+writeln('3.- Octal');
+writeln('4.- Romano');
+readln(slc);
+
+case slc of
+1:
+	begin
+		clrscr();
+		traductorbinario(l,pb,bint,txt,divbin);
+		readln;
 	
+	end;
+
+2:
+	begin
+	
+		clrscr();
+	
+	end;
+
+3:
+	begin
+	
+		clrscr();
+	
+	end;
+
+4:
+	begin
+	
+		clrscr();
+	
+	end;
+
+end;
+
 END.
+
+
 
