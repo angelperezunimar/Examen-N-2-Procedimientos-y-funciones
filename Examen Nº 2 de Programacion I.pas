@@ -14,15 +14,17 @@ uses crt;
 var 
 tofd: boolean;
 num, divisor:longint;
+color:byte;
 
-procedure comprobacion (x, y:integer);
+procedure comprobacion (var x, y:longint;z:byte);
+
 begin
 
 if x mod y = 0 then 
 	begin 
 	textcolor(white);
 	write('El numero que usted ingreso ('); 
-	textcolor(brown);
+	textcolor(z);
 	write(x);
 	textcolor(white);
 	writeln(') es divisible entre ', y);
@@ -39,14 +41,41 @@ if x mod y = 0 then
 
 end;
 
-
-
 BEGIN
 
 writeln('Ingrese un numero');
 readln(num);
+
+// ===> Se llama al procedimiento y se le asignan los valores adecuados para comprobar si es divisible entre 13 <===//
+
 divisor:= 13;
-comprobacion(num, divisor);
+color:= 6;
+comprobacion(num,divisor,color);
+
+// ===> Se llama al procedimiento y se le asignan los valores adecuados para comprobar si es divisible entre 7 <===//
+
+divisor:= 7;
+color:= 2;
+comprobacion(num,divisor,color);
+
+// ===> Se llama al procedimiento y se le asignan los valores adecuados para comprobar si es divisible entre 5 <===//
+
+divisor:= 5;
+color:= 4;
+comprobacion(num,divisor,color);
+
+// ===> Se llama al procedimiento y se le asignan los valores adecuados para comprobar si es divisible entre 3 <===//
+
+divisor:= 3;
+color:= 3;
+comprobacion(num,divisor,color);
+
+// ===> Se llama al procedimiento y se le asignan los valores adecuados para comprobar si es divisible entre 2 <===//
+
+divisor:= 2;
+color:= 14;
+comprobacion(num,divisor,color);
+
 
 
 
