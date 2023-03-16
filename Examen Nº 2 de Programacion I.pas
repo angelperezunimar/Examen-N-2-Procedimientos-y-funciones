@@ -50,11 +50,45 @@ end;
 // Procedimiento de traductor a Hexadecimal //
 
 procedure traductorhexadecimal (y:string);
-var x:integer;
-
+var
+t,u,v,x,i,conct,conct2,conct3:longint;
+z:integer;
+w:real;
 begin
 
-
+	for u:= 1 to Length(y) do
+	begin
+		t:= 1;
+		w:= 1;
+		i:= 1;
+		x:= ord(y[u]);
+			while w >= 1 do
+				begin
+				
+					while t > 0 do
+						begin
+						v:= x mod 8;
+						t:= x div 8;
+						w:= x / 8;
+						x:= t;
+						if i = 1 then 
+						begin
+						conct:= v;
+						end;
+						if i = 2 then 
+						conct2:= v;
+						if i = 3 then 
+						conct3:= v;
+						
+						i:= i + 1;
+						end;
+						
+				if i = 4 then write(conct3, conct2, conct, ' ');
+				if i = 3 then write(conct2, conct, ' ');
+				
+				end;
+		
+	end;
 
 end;
 
