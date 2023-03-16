@@ -69,7 +69,8 @@ begin
 						v:= x mod 8;
 						t:= x div 8;
 						w:= x / 8;
-						x:= v * 8;
+						x:= t;
+			
 						write(v);
 						end;
 				write(' ');
