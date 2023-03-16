@@ -13,13 +13,13 @@ l, pb, bint:Longint;
 txt:string;
 divbin,slc:integer;
 
-// Procedimineto de traductor a Binario //
+// Procedimiento de traductor a Binario //
 
-procedure traductorbinario (v,w,x:longint; y:string; z:integer);
-
+procedure traductorbinario (y:string);
+var 
+v,w,x:longint;
+z:integer;
 begin
-
-  
     
   for v:= 1 to Length(y) do
   begin
@@ -41,10 +41,52 @@ begin
   write(' ');
   end;
   
-  //========================//
   
-	
+
 end;
+
+//========================//
+
+// Procedimiento de traductor a Octal //
+
+procedure traductoroctal (y:string);
+var 
+w:real;
+i,u,v,x,conct,conct2,conct3:longint;
+z:integer;
+begin
+
+for u:= 1 to Length(y) do
+begin
+x:= ord(y[u]);
+
+  while w >= 1 do
+  begin
+  for i:= 1 to 3 do
+  w:= x / 8;
+  v:= x mod 8;
+  x:= x div 8;
+  x:= x * 8;
+  if i = 1 then
+  conct:= v;
+  if i = 2 then
+  conct2:= v;
+  if i = 3 then
+  conct3:= v;
+  end;
+  
+  write(conct3, conct2, conct,' ');
+  end;
+  
+  
+  
+  
+  
+  
+
+end;
+
+//========================//
 
 BEGIN
 	
@@ -63,8 +105,9 @@ readln(slc);
 case slc of
 1:
 	begin
+	
 		clrscr();
-		traductorbinario(l,pb,bint,txt,divbin);
+		traductorbinario(txt);
 		readln;
 	
 	end;
@@ -80,6 +123,8 @@ case slc of
 	begin
 	
 		clrscr();
+		
+		
 	
 	end;
 
