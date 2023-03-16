@@ -221,6 +221,8 @@ end;
 
 //========================//
 
+// Inicio del programa //
+
 BEGIN
 writeln('Bienvenido');
 writeln(' ');
@@ -238,11 +240,14 @@ writeln('3.- Octal');
 writeln('4.- Romano');
 readln(slc);
 
+// Case para la seleccion del tipo de traduccion //
+
 case slc of
 1:
-	begin
-	
+	begin	
 		clrscr();
+		writeln('Traduccion en proceso... Presione [Enter] para visualizarla');
+		readln();
 		traductorbinario(txt);
 		readln;
 	
@@ -252,6 +257,8 @@ case slc of
 	begin
 	
 		clrscr();
+		writeln('Traduccion en proceso... Presione [Enter] para visualizarla');
+		readln();
 		traductorhexadecimal(txt);
 		readln;
 	
@@ -261,6 +268,8 @@ case slc of
 	begin
 	
 		clrscr();
+		writeln('Traduccion en proceso... Presione [Enter] para visualizarla');
+		readln();
 		traductoroctal(txt);
 		readln();	
 	
@@ -270,6 +279,8 @@ case slc of
 	begin
 	
 		clrscr();
+		writeln('Traduccion en proceso... Presione [Enter] para visualizarla');
+		readln();
 		traductoraromano(txt);
 		readln();
 	
