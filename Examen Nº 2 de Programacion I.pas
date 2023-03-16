@@ -8,7 +8,7 @@
 // 6. De no ser divisible en base de cualquiera de los casos expuestos deberá imprimir el
 // texto en color blanco.
 
-program Enunciado2ColoresBonitosuwu;
+program Enunciado2ColoresBonitosUwU;
 
 uses crt;
 var 
