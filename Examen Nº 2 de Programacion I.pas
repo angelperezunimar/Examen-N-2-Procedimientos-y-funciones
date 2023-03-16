@@ -59,8 +59,6 @@ begin
 	for u:= 1 to Length(y) do
 	begin
 		x:= ord(y[u]);
-	//		while v >= 1 do
-	//			begin
 				
 						v:= x mod 16;
 						t:= x div 16;
@@ -125,17 +123,8 @@ begin
 						
 						else write(v);	
 						
-						
-						
-						
-						
 					write(' ');	
 				end;
-						
-				
-				
-	//end;
-
 
 end;
 
