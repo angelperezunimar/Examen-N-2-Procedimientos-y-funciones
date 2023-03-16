@@ -243,6 +243,9 @@ readln(slc);
 // Case para la seleccion del tipo de traduccion //
 
 case slc of
+
+// Traduccion a binario //
+
 1:
 	begin	
 		clrscr();
@@ -252,6 +255,10 @@ case slc of
 		readln;
 	
 	end;
+	
+	//========================//
+	
+	// Traduccion a Hexadecimal //
 
 2:
 	begin
@@ -263,6 +270,10 @@ case slc of
 		readln;
 	
 	end;
+	
+	//========================//
+	
+	// Traduccion a Octal //
 
 3:
 	begin
@@ -274,6 +285,10 @@ case slc of
 		readln();	
 	
 	end;
+	
+	//========================//
+	
+	// Traduccion a Romano //
 
 4:
 	begin
@@ -285,6 +300,8 @@ case slc of
 		readln();
 	
 	end;
+	
+	//========================//
 
 end;
 
