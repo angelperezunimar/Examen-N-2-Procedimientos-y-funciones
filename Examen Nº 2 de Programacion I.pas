@@ -51,7 +51,7 @@ end;
 
 procedure traductoroctal (y:string);
 var 
-t,u,v,x,conct,conct2,conct3:longint;
+t,u,v,x,i,conct,conct2,conct3:longint;
 z:integer;
 w: real;
 begin
@@ -60,6 +60,7 @@ begin
 	begin
 		t:= 1;
 		w:= 1;
+		i:= 1;
 		x:= ord(y[u]);
 			while w >= 1 do
 				begin
@@ -70,10 +71,16 @@ begin
 						t:= x div 8;
 						w:= x / 8;
 						x:= t;
-			
-						write(v);
+						if i = 1 then 
+						conct:= v;
+						if i = 2 then 
+						conct2:= v;
+						if i = 3 then 
+						conct3:= v;
+						
+						i:= i + 1;
 						end;
-				write(' ');
+				write(conct3, conct2, conct, ' ');
 				end;
 		
 	end;
