@@ -47,6 +47,19 @@ end;
 
 //========================//
 
+// Procedimiento de traductor a Hexadecimal //
+
+procedure traductorhexadecimal (y:string);
+var x:integer;
+
+begin
+
+
+
+end;
+
+//========================//
+
 // Procedimiento de traductor a Octal //
 
 procedure traductoroctal (y:string);
@@ -209,8 +222,11 @@ end;
 //========================//
 
 BEGIN
-	
-writeln('Ingrese el texto');
+writeln('Bienvenido');
+writeln(' ');
+writeln('Este es un traductor de Texto a Binario, Hexadecimal, Octal o Romano');
+writeln(' ');
+writeln('Ingrese el texto que desea traducir');
 readln(txt);
 
 clrscr();
@@ -236,6 +252,8 @@ case slc of
 	begin
 	
 		clrscr();
+		traductorhexadecimal(txt);
+		readln;
 	
 	end;
 
@@ -244,9 +262,7 @@ case slc of
 	
 		clrscr();
 		traductoroctal(txt);
-		readln();
-		
-		
+		readln();	
 	
 	end;
 
