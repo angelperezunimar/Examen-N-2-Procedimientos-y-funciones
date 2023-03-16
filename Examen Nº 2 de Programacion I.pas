@@ -127,16 +127,21 @@ x:= ord(y[u]);
 	 
 	 end;
 	 
-	 if x = 90 then
+	 if x >= 90 then
 	begin
 		 write('XC');
-		 x:= x - 100;
+		 x:= x - 90;
 	 end;
 	if x >= 50 then
 	begin
 		 write('L');
 		 x:= x - 50;
 	 
+	 end;
+	 if x >= 40 then
+	begin
+		 write('XL');
+		 x:= x - 40;
 	 end;
 	 
 	if x >= 10 then
@@ -158,11 +163,23 @@ x:= ord(y[u]);
 			end;
 	 
 	 end;
+	 
+	 if x >= 9 then
+	begin
+		 write('IX');
+		 x:= x - 9;
+	 end;
  
 	if x >= 5 then
 	begin
 		 write('V');
 		 x:= x - 5;
+	 end;
+	 
+	 if x >= 4 then
+	begin
+		 write('IV');
+		 x:= x - 4;
 	 end;
 	 
 	 if x >= 1 then
