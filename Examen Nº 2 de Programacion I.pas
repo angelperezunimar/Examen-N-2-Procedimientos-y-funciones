@@ -72,7 +72,9 @@ begin
 						w:= x / 8;
 						x:= t;
 						if i = 1 then 
+						begin
 						conct:= v;
+						end;
 						if i = 2 then 
 						conct2:= v;
 						if i = 3 then 
@@ -80,7 +82,10 @@ begin
 						
 						i:= i + 1;
 						end;
-				write(conct3, conct2, conct, ' ');
+						
+				if i = 4 then write(conct3, conct2, conct, ' ');
+				if i = 3 then write(conct2, conct, ' ');
+				
 				end;
 		
 	end;
