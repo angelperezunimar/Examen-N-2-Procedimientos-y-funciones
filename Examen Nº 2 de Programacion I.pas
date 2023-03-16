@@ -268,7 +268,7 @@ case slc of
 		readln();
 		traductorbinario(txt);
 		readln();
-		writeln(' ');
+		clrscr();
 		writeln('¿Desea traducir el texto a una codificacion distinta?');
 		writeln(' ');
 		writeln('1.- Si');
@@ -307,6 +307,29 @@ case slc of
 		readln();
 		traductorhexadecimal(txt);
 		readln;
+		clrscr();
+		writeln('¿Desea traducir el texto a una codificacion distinta?');
+		writeln(' ');
+		writeln('1.- Si');
+		writeln('2.- No');
+		readln(dslc);
+			if  dslc = 2 then 
+			begin
+				clrscr();
+				writeln('¿Desea convertir un texto distinto?');
+				writeln(' ');
+				writeln('1.- Si');
+				writeln('2.- No');
+				readln(tslc);
+				
+				if tslc = 2 then
+				begin
+					clrscr();
+					writeln('Tenga feliz dia');
+					rslc := 2;
+				end;
+				
+			end;
 	
 	end;
 	
@@ -322,6 +345,29 @@ case slc of
 		readln();
 		traductoroctal(txt);
 		readln();	
+		clrscr();
+		writeln('¿Desea traducir el texto a una codificacion distinta?');
+		writeln(' ');
+		writeln('1.- Si');
+		writeln('2.- No');
+		readln(dslc);
+			if  dslc = 2 then 
+			begin
+				clrscr();
+				writeln('¿Desea convertir un texto distinto?');
+				writeln(' ');
+				writeln('1.- Si');
+				writeln('2.- No');
+				readln(tslc);
+				
+				if tslc = 2 then
+				begin
+					clrscr();
+					writeln('Tenga feliz dia');
+					rslc := 2;
+				end;
+				
+			end;
 	
 	end;
 	
@@ -337,6 +383,29 @@ case slc of
 		readln();
 		traductoraromano(txt);
 		readln();
+		clrscr();
+		writeln('¿Desea traducir el texto a una codificacion distinta?');
+		writeln(' ');
+		writeln('1.- Si');
+		writeln('2.- No');
+		readln(dslc);
+			if  dslc = 2 then 
+			begin
+				clrscr();
+				writeln('¿Desea convertir un texto distinto?');
+				writeln(' ');
+				writeln('1.- Si');
+				writeln('2.- No');
+				readln(tslc);
+				
+				if tslc = 2 then
+				begin
+					clrscr();
+					writeln('Tenga feliz dia');
+					rslc := 2;
+				end;
+				
+			end;
 	
 	end;
 	
