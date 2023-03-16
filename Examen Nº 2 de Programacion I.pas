@@ -11,7 +11,7 @@ uses crt;
 var
 l, pb, bint:Longint;
 txt:string;
-divbin,slc:integer;
+divbin,slc,rslc,dslc, tslc:integer;
 
 // Procedimiento de traductor a Binario //
 
@@ -224,15 +224,28 @@ end;
 // Inicio del programa //
 
 BEGIN
+repeat
+begin
+clrscr();		
 writeln('Bienvenido');
 writeln(' ');
 writeln('Este es un traductor de Texto a Binario, Hexadecimal, Octal o Romano');
 writeln(' ');
+writeln('¿Desea usarlo?');
+writeln('1.- Si');
+writeln('2.- No');
+readln(rslc);
+
+case rslc of 
+
+1: 
+begin
+clrscr();
 writeln('Ingrese el texto que desea traducir');
 readln(txt);
 
+repeat 
 clrscr();
-
 writeln('¿A que desea traducirlo?');
 writeln('1.- Binario');
 writeln('2.- Hexadecimal');
@@ -250,9 +263,35 @@ case slc of
 	begin	
 		clrscr();
 		writeln('Traduccion en proceso... Presione [Enter] para visualizarla');
+		writeln(' ');
+		writeln('Presione [Enter] para visualizarla');
 		readln();
 		traductorbinario(txt);
-		readln;
+		readln();
+		writeln(' ');
+		writeln('¿Desea traducir el texto a una codificacion distinta?');
+		writeln(' ');
+		writeln('1.- Si');
+		writeln('2.- No');
+		readln(dslc);
+			if  dslc = 2 then 
+			begin
+				clrscr();
+				writeln('¿Desea convertir un texto distinto?');
+				writeln(' ');
+				writeln('1.- Si');
+				writeln('2.- No');
+				readln(tslc);
+				
+				if tslc = 2 then
+				begin
+					clrscr();
+					writeln('Tenga feliz dia');
+					rslc := 2;
+				end;
+				
+			end;
+		
 	
 	end;
 	
@@ -305,9 +344,21 @@ case slc of
 
 end;
 
+until dslc = 2;
+end;
+
+2: begin
+
+	writeln('Tenga feliz dia');
+	rslc:= 2;
+
+end;
+
+end;
 
 
+
+end;
+until rslc = 2;
 
 end.
-
-
