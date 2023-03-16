@@ -94,6 +94,20 @@ end;
 
 //========================//
 
+
+// Procedimiento de traductor a romano //
+
+procedure traductoraromano (y:string);
+var 
+
+begin
+
+	
+
+end;
+
+//========================//
+
 BEGIN
 	
 writeln('Ingrese el texto');
