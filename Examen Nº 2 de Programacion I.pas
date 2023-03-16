@@ -51,44 +51,91 @@ end;
 
 procedure traductorhexadecimal (y:string);
 var
-t,u,v,x,i,conct,conct2,conct3:longint;
+t,u,v,v2,v3,x,i,j,conct,conct2,conct3:longint;
 z:integer;
 w:real;
 begin
 
 	for u:= 1 to Length(y) do
 	begin
-		t:= 1;
-		w:= 1;
-		i:= 1;
 		x:= ord(y[u]);
-			while w >= 1 do
-				begin
+	//		while v >= 1 do
+	//			begin
 				
-					while t > 0 do
-						begin
-						v:= x mod 8;
-						t:= x div 8;
-						w:= x / 8;
+						v:= x mod 16;
+						t:= x div 16;
+						
 						x:= t;
-						if i = 1 then 
+						t:= x div 16;
+						v2:= x mod 16;
+						
+						x:= t;
+						t:= x div 16;
+						v3:= x mod 16;
+						
+						if v3 >= 10 then
 						begin
-						conct:= v;
-						end;
-						if i = 2 then 
-						conct2:= v;
-						if i = 3 then 
-						conct3:= v;
 						
-						i:= i + 1;
+						case v3 of
+						10: write('A');
+						11: write('B');
+						12: write('C');
+						13: write('D');
+						14: write('E');
+						15: write('F');
+						
 						end;
 						
-				if i = 4 then write(conct3, conct2, conct, ' ');
-				if i = 3 then write(conct2, conct, ' ');
-				
+						end
+						
+						else write(v3);	
+						
+						
+						if v2 >= 10 then
+						begin
+						
+						case v2 of
+						10: write('A');
+						11: write('B');
+						12: write('C');
+						13: write('D');
+						14: write('E');
+						15: write('F');
+						
+						end;
+						
+						end
+						
+						else write(v2);	
+						
+						
+						if v >= 10 then
+						begin
+						case v of
+						10: write('A');
+						11: write('B');
+						12: write('C');
+						13: write('D');
+						14: write('E');
+						15: write('F');
+						
+						end;
+						
+						end
+						
+						else write(v);	
+						
+						
+						
+						
+						
+					write(' ');	
 				end;
-		
-	end;
+						
+				
+				
+	//end;
+
 
 end;
 
