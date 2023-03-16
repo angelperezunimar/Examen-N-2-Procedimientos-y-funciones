@@ -99,10 +99,93 @@ end;
 
 procedure traductoraromano (y:string);
 var 
+x,u:integer;
 
 begin
 
-	
+for u:= 1 to Length(y) do
+begin
+x:= ord(y[u]);
+
+	if x >= 100 then
+	begin
+		 write('C');
+		 x:= x - 100;
+		 
+		  if x >= 100 then
+			begin
+				write('C');
+				x:= x - 100;
+				
+				  if x >= 100 then
+				  begin
+					write('C');
+					x:= x - 100;
+				  end;
+				  
+			end;
+	 
+	 end;
+	 
+	 if x = 90 then
+	begin
+		 write('XC');
+		 x:= x - 100;
+	 end;
+	if x >= 50 then
+	begin
+		 write('L');
+		 x:= x - 50;
+	 
+	 end;
+	 
+	if x >= 10 then
+	begin
+		 write('X');
+		 x:= x - 10;
+		 
+		  if x >= 10 then
+			begin
+				write('X');
+				x:= x - 10;
+				
+				  if x >= 10 then
+				  begin
+					write('X');
+					x:= x - 10;
+				  end;
+				  
+			end;
+	 
+	 end;
+ 
+	if x >= 5 then
+	begin
+		 write('V');
+		 x:= x - 5;
+	 end;
+	 
+	 if x >= 1 then
+	begin
+		 write('I');
+		 x:= x - 1;
+		 
+		  if x >= 1 then
+			begin
+				write('I');
+				x:= x - 1;
+				
+				  if x >= 1 then
+				  begin
+					write('I');
+					x:= x - 1;
+				  end;
+				  
+			end;
+	 
+	 end;
+ write(' ');
+end;
 
 end;
 
@@ -154,6 +237,8 @@ case slc of
 	begin
 	
 		clrscr();
+		traductoraromano(txt);
+		readln();
 	
 	end;
 
