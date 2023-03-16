@@ -59,30 +59,28 @@ begin
 for u:= 1 to Length(y) do
 begin
 x:= ord(y[u]);
-
+w:=1;
   while w >= 1 do
   begin
-  for i:= 1 to 3 do
-  w:= x / 8;
-  v:= x mod 8;
-  x:= x div 8;
-  x:= x * 8;
-  if i = 1 then
-  conct:= v;
-  if i = 2 then
-  conct2:= v;
-  if i = 3 then
-  conct3:= v;
+	  for i:= 1 to 3 do
+	  begin
+	  v:= x mod 8;
+	  x:= x div 8;
+	  x:= x * 8;
+	  if i = 1 then
+	  conct:= v;
+	  if i = 2 then
+	  conct2:= v;
+	  if i = 3 then
+	  conct3:= v;
+	  w:= x / 8;
+	  end;
+  
+  write(conct3, conct2, conct,' a');
   end;
   
-  write(conct3, conct2, conct,' ');
-  end;
-  
-  
-  
-  
-  
-  
+end;
+
 
 end;
 
@@ -137,7 +135,9 @@ case slc of
 
 end;
 
-END.
 
+
+
+end.
 
 
