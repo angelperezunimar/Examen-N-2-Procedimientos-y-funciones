@@ -51,36 +51,17 @@ end;
 
 procedure traductoroctal (y:string);
 var 
-w:real;
-i,u,v,x,conct,conct2,conct3:longint;
+i,u,v,x,w,conct,conct2,conct3:longint;
 z:integer;
 begin
 
-for u:= 1 to Length(y) do
-begin
-x:= ord(y[u]);
-w:=1;
-  while w >= 1 do
-  begin
-	  for i:= 1 to 3 do
-	  begin
-	  v:= x mod 8;
-	  x:= x div 8;
-	  x:= x * 8;
-	  if i = 1 then
-	  conct:= v;
-	  if i = 2 then
-	  conct2:= v;
-	  if i = 3 then
-	  conct3:= v;
-	  w:= x / 8;
-	  end;
-  
-  write(conct3, conct2, conct,' a');
-  end;
-  
-end;
-
+	for u:= 1 to Length(y) do
+	begin
+	
+		x:= ord(y[u]);
+		
+		
+	end;
 
 end;
 
@@ -121,6 +102,8 @@ case slc of
 	begin
 	
 		clrscr();
+		traductoroctal(txt);
+		readln();
 		
 		
 	
