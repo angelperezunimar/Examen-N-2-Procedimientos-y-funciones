@@ -14,60 +14,64 @@ uses crt;
 var 
 	num, divisor:longint;
 	color:byte;
+	
+// ===> Procedure que agrega estilo visual <===//
 
-procedure estilo (txt:string);
-var la,lb:integer;
-begin
 
-for la := 1 to length(txt) do write('=');
-writeln();
+	procedure estilo (txt:string);
+	var la,lb:integer;
+	begin
 
-writeln(txt);
+		for la := 1 to length(txt) do write('=');
+			writeln();
+			
+		writeln(txt);
 
-for lb := 1 to length(txt) do write('=');
+		for lb := 1 to length(txt) do write('=');
 
-end;
+	end;
 
 
 // ===> Se plantea el procedimiento fundamental del programa, este se encarga de verificar <===//
 // ===> que el numero sea divisible o no y imprimir adecuadamente el resultado <===//
 
-procedure comprobacion (var x, y:longint;z:byte);
+	procedure comprobacion (var x, y:longint;z:byte);
 
-begin
+	begin
 
-if x mod y = 0 then 
-	begin 
-		textcolor(white);
-		write('El numero que usted ingreso ('); 
-		textcolor(z);
-		write(x);
-		textcolor(white);
-		writeln(') es divisible entre ', y);
-	end
-	
-else
-	begin 
-		textcolor(white);
-		write('El numero que usted ingreso ('); 
-		write(x);
-		writeln(') no es divisible entre ', y);
-	end
-	
-end;
+	if x mod y = 0 then 
+		begin 
+			textcolor(white);
+			write('El numero que usted ingreso ('); 
+			textcolor(z);
+			write(x);
+			textcolor(white);
+			writeln(') es divisible entre ', y);
+		end
+	else
+		begin 
+			textcolor(white);
+			write('El numero que usted ingreso ('); 
+			write(x);
+			writeln(') no es divisible entre ', y);
+		end
+	end;
 
 BEGIN
 
 estilo('IMPRESOR CONDICIONAL DE NUMEROS');
 writeln();
 writeln();
-writeln('Se imprimira el numero que usted ha ingresado en un color especifico dependiendo de si es divisible entre 13, 7, 5, 3 y/o 2');
+writeln('Se imprimira el numero que usted ha ingresado en un color especifico');
+writeln('Dependiendo de si es divisible entre 13, 7, 5, 3 y/o 2');
+writeln();
+writeln('Para ingresar un numero ingrese el numero que desea y presione [ENTER]');
 writeln();
 write('Ingrese un numero:');
 readln(num);
 
 textcolor(white);
-	writeln('El numero que usted ingreso es: ', num);
+writeln('El numero que usted ingreso es: ', num);
 
 // ===> Se llama al procedimiento y se le asignan los valores adecuados para comprobar si es divisible entre 13 <===//
 
@@ -99,6 +103,16 @@ divisor:= 2;
 color:= 14;
 comprobacion(num,divisor,color);
 
+// ===> Se despide al usuario y al programa <===//
+
+writeln();
+writeln('Programa finalizado');
+writeln();
+estilo('TENGA BUEN DIA');
+writeln();
+writeln();
+writeln('Presione [ENTER] para cerrar el programa');
+writeln();
 readln();
 	
 END.
