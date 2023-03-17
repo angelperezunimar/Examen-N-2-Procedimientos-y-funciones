@@ -15,6 +15,20 @@ var
 	num, divisor:longint;
 	color:byte;
 
+procedure estilo (txt:string);
+var la,lb:integer;
+begin
+
+for la := 1 to length(txt) do write('=');
+writeln();
+
+writeln(txt);
+
+for lb := 1 to length(txt) do write('=');
+
+end;
+
+
 // ===> Se plantea el procedimiento fundamental del programa, este se encarga de verificar <===//
 // ===> que el numero sea divisible o no y imprimir adecuadamente el resultado <===//
 
@@ -44,7 +58,12 @@ end;
 
 BEGIN
 
-writeln('Ingrese un numero');
+estilo('IMPRESOR CONDICIONAL DE NUMEROS');
+writeln();
+writeln();
+writeln('Se imprimira el numero que usted ha ingresado en un color especifico dependiendo de si es divisible entre 13, 7, 5, 3 y/o 2');
+writeln();
+write('Ingrese un numero:');
 readln(num);
 
 textcolor(white);
