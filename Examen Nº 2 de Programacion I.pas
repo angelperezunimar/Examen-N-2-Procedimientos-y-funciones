@@ -58,7 +58,7 @@ divbin,slc,rslc,dslc, tslc:integer;
 
 	procedure traductorhexadecimal (y:string);
 	var
-		t,u,v,v2,v3,x,i,j,conct,conct2,conct3:longint;
+		t,u,v,v2,v3,x:longint;
 		z:integer;
 		w:real;
 	begin
@@ -66,7 +66,7 @@ divbin,slc,rslc,dslc, tslc:integer;
 			begin
 			x:= ord(y[u]);					
 			v:= x mod 16;
-			t:= x div 16;							
+			t:= x div 16;						
 			x:= t;
 			t:= x div 16;
 			v2:= x mod 16;							
