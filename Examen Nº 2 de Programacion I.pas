@@ -248,9 +248,11 @@ BEGIN
 repeat
 begin
 clrscr();		
-writeln('Bienvenido');
+estilo('Bienvenido');
 writeln(' ');
-writeln('Este es un traductor de Texto a Binario, Hexadecimal, Octal o Romano');
+writeln(' ');
+estilo('Este es un traductor de Texto a Binario, Hexadecimal, Octal o Romano');
+writeln(' ');
 writeln(' ');
 writeln('¿Desea usarlo?');
 writeln('1.- Si');
@@ -306,7 +308,7 @@ readln(rslc);
 							if tslc = 2 then
 								begin
 								clrscr();
-								writeln('Tenga feliz dia');
+								estilo('Tenga feliz dia');
 								rslc := 2;
 								end;	
 						end;
@@ -340,7 +342,7 @@ readln(rslc);
 							if tslc = 2 then
 							begin
 							clrscr();
-							writeln('Tenga feliz dia');
+							estilo('Tenga feliz dia');
 							rslc := 2;
 							end;
 						end;			
@@ -374,7 +376,7 @@ readln(rslc);
 							if tslc = 2 then
 								begin
 								clrscr();
-								writeln('Tenga feliz dia');
+								estilo('Tenga feliz dia');
 								rslc := 2;
 								end;						
 						end;			
@@ -408,7 +410,7 @@ readln(rslc);
 							if tslc = 2 then
 								begin
 								clrscr();
-								writeln('Tenga feliz dia');
+								estilo('Tenga feliz dia');
 								rslc := 2;
 								end;						
 						end;		
@@ -421,7 +423,7 @@ readln(rslc);
 		until dslc = 2;
 		end;
 	2: 	begin
-		writeln('Tenga feliz dia');
+		estilo('Tenga feliz dia');
 		rslc:= 2;
 		end;
 	end;
